@@ -8,9 +8,9 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-      routes:
-        - id: create_exam
-          uri: lb://EXAM
-          predicates:
-            - Path=/api/exam
-            - Method=GET
+      # routes:
+      #   - id: create_exam
+      #     uri: lb://EXAM
+      #     predicates:
+      #       - Path=/api/exam
+      #       - Method=GET
