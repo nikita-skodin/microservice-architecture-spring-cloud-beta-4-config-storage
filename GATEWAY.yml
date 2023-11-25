@@ -10,8 +10,8 @@ spring:
           lower-case-service-id: true
         routes:
           - id: create_exam
-            uri: lb://EXAM/api
+            uri: lb://EXAM
             predicates:
-              - Path=/exam
+              - Path=/api/exam
               - Method=GET
           - id:
