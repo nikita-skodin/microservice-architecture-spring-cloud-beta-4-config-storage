@@ -12,5 +12,5 @@ spring:
         - id: create_exam
           uri: lb://EXAM/api
           predicates:
-            - Path=/exam
+            - Path=/exam/**
             - Method=GET
