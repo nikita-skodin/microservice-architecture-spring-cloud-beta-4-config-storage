@@ -12,11 +12,15 @@ spring:
     password: nikita
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/test_db
-
+  
   jpa:
     show-sql: true
-    hibernate:
-      ddl-auto: create
     properties:
       hibernate:
         format_sql: true
+  
+  sql:
+    init:
+      mode: always
+      continue-on-error: false
+      data-locations: classpath:db_tests/demo_data.sql
