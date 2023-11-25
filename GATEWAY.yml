@@ -7,10 +7,28 @@ spring:
       discovery:
         locator:
           enabled: true
-#          lower-case-service-id: true
+          lower-case-service-id: true
       routes:
         - id: create_exam
-          uri: lb://EXAM/api
+          uri: lb://EXAM
           predicates:
-            - Path=/exam
+            - Path=/api/exam/**
             - Method=GET
+
+        - id: get_math_questions
+          uri: lb://MATH
+          predicates:
+            - Path=/api/math/**
+            - Method=GET
+
+        - id: get_history_questions
+          uri: lb://HISTORY
+          predicates:
+            - Path=/api/history/**
+            - Method=GET
+
+        - id: post_history_question
+          uri: lb://HISTORY
+          predicates:
+            - Path=/api/history/**
+            - Method=POST
