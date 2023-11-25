@@ -14,4 +14,3 @@ spring:
             predicates:
               - Path=/api/exam
               - Method=GET
-          - id:
