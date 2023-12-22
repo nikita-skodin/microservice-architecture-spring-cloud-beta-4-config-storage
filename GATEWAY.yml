@@ -14,32 +14,32 @@ spring:
           predicates:
             - Path=/api/exam/**
             - Method=GET
-          filters:
-            - AuthenticationFilter
+#          filters:
+#            - AuthenticationFilter
 
         - id: get_math_questions
           uri: lb://MATH
           predicates:
             - Path=/api/math/**
             - Method=GET
-          filters:
-            - AuthenticationFilter
+#          filters:
+#            - AuthenticationFilter
 
         - id: get_history_questions
           uri: lb://HISTORY
           predicates:
             - Path=/api/history/**
             - Method=GET
-          filters:
-            - AuthenticationFilter
+#          filters:
+#            - AuthenticationFilter
 
         - id: post_history_question
           uri: lb://HISTORY
           predicates:
             - Path=/api/history/**
             - Method=POST
-          filters:
-            - AuthenticationFilter
+#          filters:
+#            - AuthenticationFilter
 
         - id: auth-service
           uri: lb://AUTH
