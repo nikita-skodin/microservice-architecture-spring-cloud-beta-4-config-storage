@@ -11,7 +11,7 @@ spring:
     username: nikita
     password: nikita
     driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/db
+    url: jdbc:postgresql://localhost:5432/postgres
   
   jpa:
     show-sql: true
