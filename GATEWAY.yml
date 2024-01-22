@@ -13,7 +13,7 @@ spring:
           uri: lb://EXAM
           predicates:
             - Path=/api/exam/**
-            - Method=GET
+            - Method=POST
           filters:
             - AuthenticationFilter
 
