@@ -16,6 +16,14 @@ spring:
             - Method=POST
           filters:
             - AuthenticationFilter
+            
+        - id: get_exam_by_id
+          uri: lb://EXAM
+          predicates:
+            - Path=/api/exam/{id}/**
+            - Method=GET
+          filters:
+            - AuthenticationFilter
 
         - id: get_math_questions
           uri: lb://MATH
