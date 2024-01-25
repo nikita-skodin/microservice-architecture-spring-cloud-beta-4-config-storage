@@ -1,6 +1,13 @@
 server:
   port: 0
 
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/mongoDB
+url:
+  root: http://localhost:8765
+
 eureka:
   client:
     service-url:
